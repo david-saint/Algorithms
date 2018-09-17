@@ -29,15 +29,15 @@ I first created a Padding function to convert **1-3** digit numbers to 4-digit n
 ```javascript
 function pad(num){
 	if (num < 10)
-		return '000'+num;
+  return '000'+num;
 
-	if (num < 100)
-		return '00'+num;
+  if (num < 100)
+  return '00'+num;
 
-	if (num < 1000)
-		return '0'+num;
+  if (num < 1000)
+  return '0'+num;
 
-	return num;
+  return num;
 }
 ```
 
@@ -52,13 +52,13 @@ function KaprekarsConstant(num) {
 
 	while ((parseInt(max) - parseInt(min)) != 6174)
 	{
-        let ans = parseInt(max) - parseInt(min);
+    let ans = parseInt(max) - parseInt(min);
 
-        min = [...pad(ans).toString()].sort().join('');
-        max = [...min].sort().reverse().join('');
-        inc += 1;
-    }
+    min = [...pad(ans).toString()].sort().join('');
+    max = [...min].sort().reverse().join('');
+    inc += 1;
+  }
 
-	return inc;
+  return inc;
 }
 ```
