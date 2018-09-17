@@ -23,14 +23,21 @@ For example, given `N = 1041` the function should return **5**, because **N** ha
 
 function solution(N) {
     // write your code in JavaScript (Node.js 8.9.4)
-    let max = 0
+
+    // this is where I would store the max binary gap
+    let max = 0;
+    // Convert the number to a string in base2 and split it to an array i.e 1041 = 10000010001 = [ '', '00000', '000', '' ]
     let binary = N.toString(2).split('1');
-    binary = binary.slice(1, binary.length -1)
+    // Delete the first (it's always empty) and last (if it's empty or not we don't need it)
+    binary = binary.slice(1, binary.length -1);
     
+    // loop through the array to find the longest length of 0's
     for (let i = binary.length -1; i > -1; i--) {
         if (binary[i].length > max)
-            max = binary[i].length
+            max = binary[i].length;
     }
-    return max
+
+    // return the maximum
+    return max;
 }
 ```
