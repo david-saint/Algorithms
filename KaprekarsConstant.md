@@ -27,15 +27,15 @@ For example: if num is **3524** your program should return **3** because of the 
 I first created a Padding function to convert **1-3** digit numbers to 4-digit numbers.
 
 ```javascript
-function pad(num){
-	if (num < 10)
-  return '000'+num;
+function pad(num) {
+  if (num < 10)
+    return '000'+num;
 
   if (num < 100)
-  return '00'+num;
+    return '00'+num;
 
   if (num < 1000)
-  return '0'+num;
+    return '0'+num;
 
   return num;
 }
@@ -46,12 +46,12 @@ Then I created the Kaprekars function
 ```javascript
 function KaprekarsConstant(num) {
 
-	let min = [...pad(num).toString()].sort().join('');
-	let max = [...min].sort().reverse().join('');
-	let inc = 1;
+  let min = [...pad(num).toString()].sort().join('');
+  let max = [...min].sort().reverse().join('');
+  let inc = 1;
 
-	while ((parseInt(max) - parseInt(min)) != 6174)
-	{
+  while ((parseInt(max) - parseInt(min)) != 6174)
+  {
     let ans = parseInt(max) - parseInt(min);
 
     min = [...pad(ans).toString()].sort().join('');
