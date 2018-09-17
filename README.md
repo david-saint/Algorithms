@@ -2,6 +2,6 @@
 
 Documented algorithms questions and their implementation.
 
- * [Digital Difference](./DigitalDifference.md)
+ * [Diagonal Difference](./DiagonalDifference.md)
  * [Kaprekars Constant](./KaprekarsConstant.md)
  * [Largest Binary Gap](./LargestBinaryGap.md)
